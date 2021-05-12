@@ -30,7 +30,7 @@ import wseemann.media.FFmpegMediaMetadataRetriever;
 public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder> {
 
     private Context mContext;
-    private ArrayList<MusicFiles> mFiles;
+    static ArrayList<MusicFiles> mFiles;
 
     MusicAdapter(Context mContext, ArrayList<MusicFiles> mFiles){
         this.mFiles = mFiles;
@@ -132,5 +132,11 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
         retriever.release();
 
         return art;
+    }
+
+    void updateList(ArrayList<MusicFiles> musicFilesArrayList){
+        mFiles = new ArrayList<>();
+        mFiles.addAll(musicFilesArrayList);
+        notifyDataSetChanged();
     }
 }

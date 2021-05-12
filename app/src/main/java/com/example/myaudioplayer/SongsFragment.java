@@ -29,7 +29,7 @@ public class SongsFragment extends Fragment {
     private String mParam2;
 
     RecyclerView recyclerView;
-    MusicAdapter musicAdapter;
+    static MusicAdapter musicAdapter;
 
     public SongsFragment() {
         // Required empty public constructor
