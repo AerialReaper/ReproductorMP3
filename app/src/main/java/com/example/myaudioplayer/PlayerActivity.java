@@ -395,7 +395,7 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
                 public void onGenerated(@Nullable Palette palette) {
                     Palette.Swatch swatch = palette.getDominantSwatch();
                     if (swatch != null){
-                        ImageView gradient = findViewById(R.id.ImageViewGradient);
+                        ImageView gradient = findViewById(R.id.imageViewGradient);
                         RelativeLayout mContainer = findViewById(R.id.mContainer);
                         gradient.setBackgroundResource(R.drawable.gradient_bg);
                         mContainer.setBackgroundResource(R.drawable.main_bg);
@@ -404,12 +404,12 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
                         gradient.setBackground(gradientDrawable);
 
                         GradientDrawable gradientDrawableBg = new GradientDrawable(GradientDrawable.Orientation.BOTTOM_TOP, new int[]{swatch.getRgb(), swatch.getRgb()});
-                        gradient.setBackground(gradientDrawableBg);
+                        mContainer.setBackground(gradientDrawableBg);
 
                         song_name.setTextColor(swatch.getTitleTextColor());
                         artist_name.setTextColor(swatch.getBodyTextColor());
                     }else{
-                        ImageView gradient = findViewById(R.id.ImageViewGradient);
+                        ImageView gradient = findViewById(R.id.imageViewGradient);
                         RelativeLayout mContainer = findViewById(R.id.mContainer);
                         gradient.setBackgroundResource(R.drawable.gradient_bg);
                         mContainer.setBackgroundResource(R.drawable.main_bg);
@@ -428,7 +428,7 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
         }else{
 //            bitmap = BitmapFactory.decodeByteArray(art, 0, art.length);
 //            ImageAnimation(this, covert_art, bitmap);
-            ImageView gradient = findViewById(R.id.ImageViewGradient);
+            ImageView gradient = findViewById(R.id.imageViewGradient);
             RelativeLayout mContainer = findViewById(R.id.mContainer);
             gradient.setBackgroundResource(R.drawable.gradient_bg);
             mContainer.setBackgroundResource(R.drawable.main_bg);
