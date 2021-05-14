@@ -184,12 +184,19 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     public boolean onQueryTextChange(String s) {
         String userInput = s.toLowerCase();
         ArrayList<MusicFiles> myFiles = new ArrayList<>();
+        ArrayList<MusicFiles> myAlbums = new ArrayList<>();
         for (MusicFiles song : musicFiles){
             if (song.getTitle().toLowerCase().contains(userInput)){
                 myFiles.add(song);
             }
         }
+        for (MusicFiles album : musicFiles){
+            if (album.getAlbum().toLowerCase().contains(userInput)){
+                myAlbums.add(album);
+            }
+        }
         SongsFragment.musicAdapter.updateList(myFiles);
+        AlbumFragment.albumAdapter.updateList(myAlbums);
         return true;
     }
 

@@ -22,7 +22,7 @@ import static com.example.myaudioplayer.MainActivity.musicFiles;
 public class AlbumFragment extends Fragment {
 
     RecyclerView recyclerView;
-    AlbumAdapter albumAdapter;
+    static AlbumAdapter albumAdapter;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

@@ -81,4 +81,11 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyHolder> {
 
         return art;
     }
+
+
+    void updateList(ArrayList<MusicFiles> musicFilesArrayList){
+        albumFiles = new ArrayList<>();
+        albumFiles.addAll(musicFilesArrayList);
+        notifyDataSetChanged();
+    }
 }
