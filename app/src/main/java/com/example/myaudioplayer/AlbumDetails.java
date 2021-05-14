@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.media.Image;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -20,6 +21,7 @@ public class AlbumDetails extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ImageView albumPhoto;
+    TextView albumNameTV;
     String albumName;
     ArrayList<MusicFiles> albumSongs = new ArrayList<>();
     AlbumDetailsAdapter albumDetailsAdapter;
@@ -29,6 +31,7 @@ public class AlbumDetails extends AppCompatActivity {
         setContentView(R.layout.activity_album_details);
         recyclerView = findViewById(R.id.recyclerView);
         albumPhoto = findViewById(R.id.albumPhoto);
+        albumNameTV = findViewById(R.id.albumName);
         albumName = getIntent().getStringExtra("albumName");
         int j = 0;
         for (int i = 0 ; i < musicFiles.size() ; i++){
@@ -37,7 +40,7 @@ public class AlbumDetails extends AppCompatActivity {
                 j++;
             }
         }
-
+        albumNameTV.setText(albumSongs.get(0).getAlbum());
         byte[] image = getAlbumArt(albumSongs.get(0).getPath());
         if (image != null){
             Glide.with(this)

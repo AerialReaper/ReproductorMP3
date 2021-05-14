@@ -35,7 +35,7 @@ public class AlbumDetailsAdapter extends RecyclerView.Adapter<AlbumDetailsAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
-        holder.album_name.setText(albumFiles.get(position).getTitle());
+        holder.album_song.setText(albumFiles.get(position).getTitle());
         byte[] image = getAlbumArt(albumFiles.get(position).getPath());
 
         if (image != null){
@@ -65,11 +65,11 @@ public class AlbumDetailsAdapter extends RecyclerView.Adapter<AlbumDetailsAdapte
 
     public class MyHolder extends RecyclerView.ViewHolder {
         ImageView album_image;
-        TextView album_name;
+        TextView album_song;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             album_image = itemView.findViewById(R.id.music_img);
-            album_name = itemView.findViewById(R.id.music_file_name);
+            album_song = itemView.findViewById(R.id.music_file_name);
         }
     }
 

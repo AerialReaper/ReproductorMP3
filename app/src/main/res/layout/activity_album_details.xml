@@ -26,4 +26,20 @@
         android:id="@+id/recyclerView"
         android:layout_below="@+id/albumPhoto"/>
 
+    <TextView
+        android:id="@+id/albumName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/albumPhoto"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="17dp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="This is Album Name"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>

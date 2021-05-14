@@ -11,8 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAudioPlayer">
-        <activity android:name=".AlbumDetails"></activity>
-        <activity android:name=".PlayerActivity" />
+        <activity android:name=".AlbumDetails"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity android:name=".PlayerActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
