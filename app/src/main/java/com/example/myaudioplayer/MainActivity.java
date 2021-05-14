@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         ViewPager viewPager = findViewById(R.id.viewpager);
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new SongsFragment(), "Songs");
-        viewPagerAdapter.addFragment(new AlbumFragment(), "Albums");
+        viewPagerAdapter.addFragment(new SongsFragment(), getString(R.string.mainSongsEN));
+        viewPagerAdapter.addFragment(new AlbumFragment(), getString(R.string.mainAlbumsEN));
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }

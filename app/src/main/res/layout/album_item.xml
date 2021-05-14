@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/album_name"
             android:layout_alignParentBottom="true"
-            android:text="Album"
+            android:text="@string/albumEN"
             android:textColor="#fff"
             android:singleLine="true"
             android:gravity="center_horizontal"

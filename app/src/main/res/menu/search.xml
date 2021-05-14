@@ -3,27 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:title="Search"
+        android:title="@string/SearchEN"
         android:id="@+id/search_option"
         android:icon="@drawable/ic_menu_search"
         app:showAsAction="ifRoom"
         app:actionViewClass="androidx.appcompat.widget.SearchView" />
 
     <item
-        android:title="Sort by"
+        android:title="@string/menuSortByEN"
         android:id="@+id/sort_options"
         app:showAsAction="never">
         <menu>
             <item
-                android:title="Name"
+                android:title="@string/menuSortNameEN"
                 android:id="@+id/by_name"
                 app:showAsAction="never"/>
             <item
-                android:title="Date"
+                android:title="@string/menuSortDateEN"
                 android:id="@+id/by_date"
                 app:showAsAction="never"/>
             <item
-                android:title="Size"
+                android:title="@string/menuSortSizeEN"
                 android:id="@+id/by_size"
                 app:showAsAction="never"/>
         </menu>

@@ -2,4 +2,37 @@
     <string name="app_name">X Player</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="durationPlayed">1:29</string>
+    <string name="durationTotal">3:32</string>
+
+    <string name="mainSongsEN">Songs</string>
+    <string name="mainAlbumsEN">Albums</string>
+    <string name="albumNameEN">This is Album Name</string>
+    <string name="albumEN">Album</string>
+    <string name="nowPlayingEN">Now Playing</string>
+    <string name="songNameEN">This is Song Name</string>
+    <string name="artistNameEN">This is Artist Name</string>
+    <string name="fileNameEN">File Name</string>
+    <string name="SearchEN">Search</string>
+    <string name="menuSortByEN">Sort by</string>
+    <string name="menuDeleteEN">Delete</string>
+    <string name="menuSortNameEN">Name</string>
+    <string name="menuSortDateEN">Date</string>
+    <string name="menuSortSizeEN">Size</string>
+
+    <string name="mainSongsES">Canciones</string>
+    <string name="mainAlbumsES">Albums</string>
+    <string name="albumNameES">Nombre del Album</string>
+    <string name="albumES">Album</string>
+    <string name="nowPlayingES">Sonando Ahora</string>
+    <string name="songNameES">Esto es el nombre de canción</string>
+    <string name="artistNameES">Esto es el nombre del artista</string>
+    <string name="fileNameES">Nombre de canción</string>
+    <string name="SearchES">Buscar</string>
+    <string name="menuSortByES">Ordenar por</string>
+    <string name="menuDeleteES">Eliminar</string>
+    <string name="menuSortNameES">Nombre</string>
+    <string name="menuSortDateES">Fecha</string>
+    <string name="menuSortSizeES">Tamaño</string>
 </resources>
