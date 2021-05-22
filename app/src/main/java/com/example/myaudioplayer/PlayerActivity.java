@@ -336,7 +336,7 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
         }else{
             return totalout;
         }
-    };
+    }
 
     private void getIntentMethod() {
         position = getIntent().getIntExtra("position", -1);
@@ -373,7 +373,6 @@ public class PlayerActivity extends AppCompatActivity implements MediaPlayer.OnC
         covert_art = findViewById(R.id.cover_art);
         nextBtn = findViewById(R.id.id_next);
         prevBtn = findViewById(R.id.id_prev);
-        backBtn = findViewById(R.id.back_btn);
         shuffleBtn = findViewById(R.id.id_shuffle);
         repeatBtn = findViewById(R.id.id_repeat);
         playPauseBtn = findViewById(R.id.play_pause);
