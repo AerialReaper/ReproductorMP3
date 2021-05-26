@@ -80,7 +80,8 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.delete:
-                                Toast.makeText(mContext, "Delete Clicked!!", Toast.LENGTH_SHORT).show();
+                                //Delete:
+                                //Toast.makeText(mContext, "Delete Clicked!!", Toast.LENGTH_SHORT).show();
                                 deleteFile(position, view);
                                 break;
                         }
@@ -96,15 +97,16 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
                 Long.parseLong(mFiles.get(position).getId()));
         File file = new File(mFiles.get(position).getPath());
         boolean deleted = file.delete(); // Delete the file
+        Log.e("path:", ""+file.getAbsolutePath());
         if (deleted){
             mContext.getContentResolver().delete(contentUri, null, null);
             mFiles.remove(position);
             notifyItemRemoved(position);
             notifyItemRangeChanged(position, mFiles.size());
-            Snackbar.make(view, "File Deleted: ", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(view, "File Deleted!", Snackbar.LENGTH_LONG).show();
         }else{
             // maybe file is in the sd card
-            Snackbar.make(view, "Can't be deleted : ", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(view, "Can't be deleted! ", Snackbar.LENGTH_LONG).show();
         }
     }
 

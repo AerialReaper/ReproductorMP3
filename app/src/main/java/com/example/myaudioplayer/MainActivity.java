@@ -27,6 +27,7 @@ import android.widget.Toast;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
@@ -185,6 +186,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         String userInput = s.toLowerCase();
         ArrayList<MusicFiles> myFiles = new ArrayList<>();
         ArrayList<MusicFiles> myAlbums = new ArrayList<>();
+        ArrayList<String> albumTitles = new ArrayList<>();
         for (MusicFiles song : musicFiles){
             if (song.getTitle().toLowerCase().contains(userInput)){
                 myFiles.add(song);
@@ -192,7 +194,11 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         }
         for (MusicFiles album : musicFiles){
             if (album.getAlbum().toLowerCase().contains(userInput)){
-                myAlbums.add(album);
+                boolean contiene = albumTitles.contains(album.getAlbum());
+                if (!albumTitles.contains(album.getAlbum())){
+                    albumTitles.add(album.getAlbum());
+                    myAlbums.add(album);
+                }
             }
         }
         SongsFragment.musicAdapter.updateList(myFiles);
